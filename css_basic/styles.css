@@ -31,3 +31,8 @@ main > aside {
   min-height: 0;
 }
 /* ==== End of Task 1 ==== */
+
+@media (max-width: 800px) {
+  body.works_on_smartphone { display: block; }
+  body.works_on_smartphone main { display: block; }
+}
