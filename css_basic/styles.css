@@ -59,7 +59,6 @@ body{
 
 /* ===========================
    Header & nav (colors, borders, text) 
-   (do NOT change flex here)
    =========================== */
 header{
   background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
@@ -93,7 +92,7 @@ header a[aria-current="page"]{
 }
 
 /* ===========================
-   Article (you’re allowed to style freely inside)
+   Article (content) styling
    =========================== */
 article{
   color:var(--ink);
