@@ -1,0 +1,33 @@
+/* ==== Task 1: Flexbox Layout ==== */
+
+/* 1) Make body a vertical flex container: header, main, footer stack top→bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  /* Ensure the page fills the viewport height */
+  min-height: 100vh;
+}
+
+/* 2) Make main a horizontal flex container: article (left) + aside (right) */
+main {
+  display: flex;
+  flex-direction: row;
+
+  /* 3) Let main grow to take the leftover space between header and footer */
+  flex: auto; /* same as flex: 1 1 auto */
+  min-height: 0; /* helps child overflow scroll correctly in some browsers */
+}
+
+/* 4) 2:1 width ratio between article and aside */
+main > article {
+  flex: 2;       /* ~two parts => ~2/3 width */
+  overflow-y: auto;  /* 5) internal scroll if content is tall */
+  min-height: 0;     /* guard for overflow in flex context */
+}
+
+main > aside {
+  flex: 1;       /* ~one part => ~1/3 width */
+  overflow-y: auto;  /* 5) internal scroll if content is tall */
+  min-height: 0;
+}
+/* ==== End of Task 1 ==== */
