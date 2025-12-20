@@ -1,0 +1,138 @@
+/* ================================
+   Base reset & global tokens
+================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: #161616;
+  line-height: 1.4;
+}
+
+:root{
+  --brand: #FF6565;      /* link hover/active color */
+  --text: #161616;
+  --muted: #8f8f8f;
+  --maxw: 1000px;        /* content max width */
+  --space: 16px;
+  --btn-radius: 28px;
+}
+
+/* Layout helper */
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+
+/* Links & buttons (spec interactions) */
+a { color: inherit; text-decoration: none; }
+a:hover,
+a:active { color: var(--brand); }
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--btn-radius);
+  font-weight: 600;
+  text-align: center;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.btn--primary { background: var(--brand); color: #fff; }
+.btn:hover,
+.btn:active { opacity: .9; }
+
+/* ================================
+   Header over the hero image
+================================== */
+.site-header {
+  position: absolute;      /* float over hero */
+  top: 0; left: 0; right: 0;
+  background: transparent; /* no white bar */
+  color: #fff;
+  z-index: 3;              /* above hero overlay */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 24px;
+}
+
+.logo img { display: block; }
+
+/* nav links sit on dark image → force white */
+.site-header a { color: #fff; }
+.site-header a:hover,
+.site-header a:active { color: var(--brand); }
+
+.main-nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+}
+.main-nav a { font-weight: 600; }
+
+/* ================================
+   Hero section (bg image + overlay)
+================================== */
+.hero {
+  position: relative;
+  min-height: 560px;          /* adjust to match Figma */
+  display: grid;
+  align-items: center;
+  color: #fff;
+  isolation: isolate;         /* independent stacking */
+  padding-top: 80px;          /* room under absolute header */
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    /* dark overlay for contrast */
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("./images/headphones_hero_1.jpg") center/cover no-repeat;
+  z-index: -1;                /* sit behind content */
+}
+
+.hero__content {
+  text-align: center;
+  max-width: 760px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1.15;
+}
+.hero__subtitle {
+  margin: 0 0 24px;
+  color: #f0f0f0;
+}
+.hero__desc {
+  margin: 28px auto 0;
+  max-width: 820px;
+  color: #e6e6e6;
+  line-height: 1.6;
+  font-size: 15.5px;
+}
+
+/* ================================
+   Responsive (≤480px)
+================================== */
+@media (max-width: 480px) {
+  .header-inner { padding-block: 16px; }
+  .main-nav .nav-list { gap: 18px; }
+
+  .hero {
+    min-height: 520px;
+    padding-top: 72px; /* slightly tighter on small screens */
+  }
+  .hero h1 { font-size: 28px; }
+  .hero__subtitle { font-size: 14px; }
+  .btn { padding: 12px 22px; }
+}
