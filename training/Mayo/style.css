@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /* Adds a little space between lines of text for readability */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;           /* Changes text to white */
+    text-decoration: none;  /* Removes the underline */
+    font-size: 1.2rem;      /* Bumps up the size slightly */
+}
+
+nav a:hover {
+    color: #ee3ff4; /* A nice gold highlight */
+    transition: color 1s ease; /* smooths out the color change */
+}
+
+#hero {
+    height: 100vh;            /* Full screen height */
+    display: flex;            /* Turn on Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    background-color: #f4f4f4; /* Light gray background to distinguish it */
+    flex-direction: column; /* Stacks items vertically */
+    text-align: center;       /* Ensures text inside aligns center too */
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 2rem; /* Space between grid cells */
+    padding: 2rem; /* Space inside the container edges */
+}
+
+#projects h2 {
+    grid-column: 1 / -1; /* Start at line 1, end at the last line */
+    text-align: center;  /* Optional: Center the text itself */
+    margin-bottom: 1rem; /* Add some space below the title */
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* transition for hover effect later */
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;       /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional: matches the card's rounded corners slightly */
+    display: block;     /* Removes a tiny default gap under images */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0; /* This adds space so the text isn't squished against the edges */
+}
+
+#projects h2::after {
+    content: "";          /* Required for the element to appear */
+    display: block;       /* Put it on its own line */
+    width: 50px;          /* Width of the line */
+    height: 4px;          /* Thickness of the line */
+    background: #f4d03f;  /* Same gold color as our hover */
+    margin: 10px auto;    /* Center the line and add space above/below */
+}
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+    #projects {
+        grid-template-columns: 1fr; /* Changes 3 columns to 1 */
+    }
+}
+
+
+#contact-form  form {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    max-width: 500px;       /* Keeps the form from getting too wide */
+    margin: 0 auto;         /* Centers the form on the page */
+    gap: 1rem;              /* Adds space between each input and label */
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;   /* Ensures they use the same font as the body */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #f4d03f; /* Highlights on hover */
+    color: #333;
+}
+
+
+#contact-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
