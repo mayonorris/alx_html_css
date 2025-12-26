@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6; /* Adds a little space between lines of text for readability */
@@ -14,7 +18,13 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    
+    /* Sticky Magic */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
 }
+
 /* Navigation Styles */
 nav ul {
     list-style: none;
@@ -42,6 +52,11 @@ nav a:hover {
     background-color: #f4f4f4; /* Light gray background to distinguish it */
     flex-direction: column; /* Stacks items vertically */
     text-align: center;       /* Ensures text inside aligns center too */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Make text white to contrast with dark image */
 }
 
 #projects {
@@ -140,4 +155,34 @@ button:hover {
     transform: translateY(-10px); /* Lifts the card up */
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Deepens the shadow */
     border: 1px solid #f4d03f; /* Adds a subtle gold border */
+}
+
+
+#skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows skills to drop to the next line on mobile */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 50px; /* Makes them pill-shaped */
+    font-weight: bold;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background: #333;
+    color: #f4d03f;
+    transform: scale(1.1);
 }
