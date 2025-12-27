@@ -186,3 +186,23 @@ button:hover {
     color: #f4d03f;
     transform: scale(1.1);
 }
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #f4d03f; /* Our gold accent color */
+    color: #333;               /* Dark text for readability */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #333;    /* Switch colors on hover */
+    color: #f4d03f;
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
