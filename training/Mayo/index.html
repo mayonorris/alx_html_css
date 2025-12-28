@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Mayo Takémsi Norris | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="r_logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,103 +14,91 @@
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h1>Hello, I'm a Developer</h1>
-        <p>Welcome to my portfolio.</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+        <div class="hero-content">
+            <h1>Hello, I'm a Developer</h1>
+            <p>Welcome to my portfolio.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </section>
 
     <section id="projects">
         <h2>My Work</h2>
-    
-        <div class="card">
-    
-            <a href="#project1-full">
-                <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            </a>
-    
-            <h3>Rshiny Project</h3>
-
-        <div class="lightbox" id="project1-full">
-        
-            <a href="#projects" class="close-btn">&times;</a>
-        
-            <div class="lightbox-content">
-                <img src="https://picsum.photos/id/1/800/600" alt="Full Preview">
-                <p>A more detailed description of my Rshiny app could go here!</p>
+        <div class="projects-grid">
+            <div class="card">
+                <a href="#project1-full">
+                    <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
+                </a>
+                <h3>Rshiny Analytics App</h3>
             </div>
-        
-        </div>
-</div>
 
-        <div class="card">
-            <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            <h3>Rshiny Project</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            <h3>Rshiny Project</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            <h3>Rshiny Project</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            <h3>Rshiny Project</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/id/1/300/200" alt="Rshiny Project">
-            <h3>Rshiny Project</h3>
-        </div>
-
+            <div class="card">
+                <a href="#project2-full">
+                    <img src="https://picsum.photos/id/2/300/200" alt="Data Visualization">
+                </a>
+                <h3>Visualization Dashboard</h3>
+            </div>
+            
+            </div>
     </section>
 
     <section id="skills">
         <h2>Skills & Tools</h2>
-            <div class="skills-container">
-                <div class="skill-card">R Programming</div>
-                <div class="skill-card">R Shiny</div>
-                <div class="skill-card">Data Visualization</div>
-                <div class="skill-card">CSS/HTML</div>
-            </div>
+        <div class="skills-container">
+            <div class="skill-card"><i class="fa-solid fa-code"></i> R Programming</div>
+            <div class="skill-card"><i class="fa-solid fa-chart-line"></i> R Shiny</div>
+            <div class="skill-card"><i class="fa-solid fa-database"></i> Data Viz</div>
+            <div class="skill-card"><i class="fa-brands fa-css3-alt"></i> CSS/HTML</div>
+        </div>
     </section>
 
-    <section id="contact-form">
-
+    <section id="contact-section">
         <h2>Contact Me</h2>
-
         <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name">
+                <input type="text" id="name" name="user_name" placeholder="Your Name">
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="user_email">
+                <input type="email" id="email" name="user_email" placeholder="Your Email">
             </div>
 
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea id="message" name="user_message"></textarea>
-        </div>
+                <textarea id="message" name="user_message" placeholder="Write your message here..."></textarea>
+            </div>
 
             <button type="submit">Send Message</button>
         </form>
     </section>
+
     <footer>
         <p>&copy; 2025 Mayo Takémsi Norris KADANGA</p>
     </footer>
+
+    <div class="lightbox" id="project1-full">
+        <a href="#!" class="close-btn">&times;</a>
+        <div class="lightbox-content">
+            <img src="https://picsum.photos/id/1/800/600" alt="Full Preview">
+            <p>Detailed breakdown of my Rshiny Project features.</p>
+        </div>
+    </div>
+
+    <div class="lightbox" id="project2-full">
+        <a href="#!" class="close-btn">&times;</a>
+        <div class="lightbox-content">
+            <img src="https://picsum.photos/id/2/800/600" alt="Full Preview">
+            <p>A second project preview.</p>
+        </div>
+    </div>
 
 </body>
 </html>
